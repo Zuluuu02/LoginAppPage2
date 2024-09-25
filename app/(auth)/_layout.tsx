@@ -4,7 +4,7 @@ export default function AuthLayout() {
   return (
     <Stack
       screenOptions={{
-        title: "Auth",
+        title: "HOME",
       }}
     >
       <Stack.Screen name="login" />
