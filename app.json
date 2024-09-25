@@ -1,10 +1,10 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "TRESBLAZERS",
     "web": {
       "bundler": "metro"
     },
-    "name": "my-router-app",
-    "slug": "my-router-app"
+    "name": "TRESBLAZERS",
+    "slug": "TRESBLAZERS"
   }
 }

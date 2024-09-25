@@ -14,7 +14,6 @@ export default function Profile() {
 
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
       <Pressable onPress={onLogOut} style={styles.button}>
         <Text style={{ color: "white" }}>Log Out</Text>
       </Pressable>
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 16,
     width: "60%",
-    backgroundColor: "#05BFDB",
+    backgroundColor: "#2F4F4F",
     marginTop: 8,
     borderRadius: 32,
     alignItems: "center",

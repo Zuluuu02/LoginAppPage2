@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Notification() {
   return (
     <View style={styles.container}>
-      <Text>Notification</Text>
+      <Text>Notification Ni</Text>
     </View>
   );
 }

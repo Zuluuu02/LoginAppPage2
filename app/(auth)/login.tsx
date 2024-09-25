@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, Image } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { TextInput } from "react-native-gesture-handler";
 import { useAuth } from "../../context/auth";
@@ -18,6 +18,13 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
+      <Image 
+        source={require('../../assets/app.png')} 
+        style={styles.logo} 
+      />
+      <Text style={styles.title}>Welcome to USTP Student Portal</Text>
+      <Text style={styles.subtitle}>Home of the Trailblazers</Text>
+
       <TextInput
         style={styles.textInput}
         value={email}
@@ -31,12 +38,13 @@ export default function Login() {
         placeholder="Type password"
         secureTextEntry
       />
-      <View style={styles.separator} />
-      <Pressable onPress={onLogin} style={styles.button}>
-        <Text style={styles.text}>Login</Text>
+
+      <Pressable onPress={onLogin} style={styles.loginButton}>
+        <Text style={styles.loginText}>Log in</Text>
       </Pressable>
-      <Pressable onPress={() => router.push("/register")} style={styles.button}>
-        <Text style={styles.text}>Register</Text>
+
+      <Pressable onPress={() => router.push("/register")} style={styles.registerButton}>
+        <Text style={styles.registerText}>Create an account</Text>
       </Pressable>
     </View>
   );
@@ -45,31 +53,62 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FAF7F7", 
+    paddingHorizontal: 20,
   },
-  separator: {
-    marginTop: 16,
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 8,
+    color: "#2F4F4F", 
+    textAlign: "center",
+  },
+  subtitle: {
+    fontSize: 14,
+    marginBottom: 40,
+    color: "#2F4F4F",
+    textAlign: "center",
   },
   textInput: {
-    paddingHorizontal: 32,
-    paddingVertical: 16,
-    borderWidth: 1,
-    borderColor: "grey",
-    marginTop: 8,
-    width: "60%",
-    borderRadius: 32,
-  },
-  text: {
-    color: "white",
-  },
-  button: {
+    width: "80%",
+    paddingVertical: 12,
     paddingHorizontal: 16,
-    paddingVertical: 16,
-    width: "60%",
-    backgroundColor: "#05BFDB",
-    marginTop: 8,
-    borderRadius: 32,
+    borderWidth: 1,
+    borderColor: "gray",
+    borderRadius: 24,
+    marginBottom: 20,
+    backgroundColor: "white",
+  },
+  loginButton: {
+    width: "80%",
+    paddingVertical: 12,
+    backgroundColor: "#0B4522", 
+    borderRadius: 24,
     alignItems: "center",
+    marginBottom: 16,
+  },
+  loginText: {
+    color: "white",
+    fontSize: 16,
+  },
+  registerButton: {
+    width: "80%",
+    paddingVertical: 12,
+    backgroundColor: "white",
+    borderColor: "#0B4522",
+    borderWidth: 2,
+    borderRadius: 24,
+    alignItems: "center",
+  },
+  registerText: {
+    color: "#0B4522", 
+    fontSize: 16,
   },
 });

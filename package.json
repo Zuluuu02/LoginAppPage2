@@ -1,5 +1,5 @@
 {
-  "name": "loginapppagerouter",
+  "name": "loginapppage2",
   "version": "1.0.1",
   "scripts": {
     "start": "expo start",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chasty/expo-router-auth-navigation-template"
+    "url": "https://github.com/Zuluuu02/LoginAppPage2"
   },
   "keywords": [
     "expo",

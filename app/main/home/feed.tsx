@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Feed() {
   return (
     <View style={styles.container}>
-      <Text>Feed</Text>
+      <Text>Hi Trailbalzers!</Text>
     </View>
   );
 }
